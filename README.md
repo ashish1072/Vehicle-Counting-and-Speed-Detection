@@ -1,4 +1,4 @@
-# Vehicle Counting and Speed Detection with YOLOv3 and SORT
+# Vehicle Counting and Speed Detection with YOLOv3 and SORT Tracking Algorithm
 
 ## Requirements
 Google Drive and Google Colab
