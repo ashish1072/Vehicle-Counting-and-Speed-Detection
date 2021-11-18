@@ -10,6 +10,7 @@ Google Drive and Google Colab
 3. Provide input/output video paths in main.py 
 4. Open the notebook.ipynb in Google Colab and run the cells in sequential order
 5. Output video and .txt files containing info on speed and counting will be saved in the folder 'output'
+
 ![log_output.jpg](log_output.jpg)
 
 ## Remarks
