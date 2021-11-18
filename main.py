@@ -16,14 +16,6 @@ import datetime
 
 
 def main(yolo):
-        
-    # Construct the argument parse and parse the arguments
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-c", "--confidence", type=float, default=0.5,
-        help="minimum probability to filter weak detections")
-    ap.add_argument("-t", "--threshold", type=float, default=0.4,
-        help="threshold when applyong non-maxima suppression")
-    args = vars(ap.parse_args())
 
     # Put your video path here
     Root_Dir = '/content/drive/My Drive/counting_and_speed'
@@ -45,14 +37,14 @@ def main(yolo):
     header_speed = 'Class,Direction,Speed,Time\n'
     text_file_speed.write(header_speed)
     
-    # Return true if line segments AB and CD intersect
+    # Outputs True if AB and CD lines intersect
     def intersect(A,B,C,D):
         return ccw(A,C,D) != ccw(B,C,D) and ccw(A,B,C) != ccw(A,B,D)
 
     def ccw(A,B,C):
         return (C[1]-A[1]) * (B[0]-A[0]) > (B[1]-A[1]) * (C[0]-A[0])
     
-    # loop over videos
+    # Loop over videos
     for vid in vid_list:
         frameIndex = 0
         speed_id = {}    
@@ -75,7 +67,7 @@ def main(yolo):
         vs_path = Root_Dir + '/videos/' + vid
         vs = cv2.VideoCapture(vs_path)
         
-        # loop over frames from the video file
+        # Loop over frames from the video file
         while True:
             print('\nFrame No: {}'.format(frameIndex))
             # Read the next frame from the file
